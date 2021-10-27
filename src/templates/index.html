@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+
+{% include 'head.html' %}
+
+<body>
+    {% include 'header.html' %}
+
+    <main>
+        <h2>Upload</h2>
+        
+        <form action="" method="POST" enctype="multipart/form-data">
+            <input type="file" id="upload" name="upload" multiple />
+
+            <p>
+                <label>
+                    <input type="checkbox" id="reversed" name="reversed"/>Reverse priority order</a>
+                    <i onclick="alert('The packs you uploaded are being merged in the order you chose them, by default.\nCheck this to reverse this, so that the latest selected packs will have the highest priority when having to decide which file to ignore and which to replace.')"><strong>?</strong></i>
+                </label>
+            </p>
+
+            <a href="/download">
+                <input type="submit" value="Generate!" class="submit_button" />
+            </a>
+
+        </main>
+
+    {% include 'footer.html' %}
+</body>
+
+</html>
